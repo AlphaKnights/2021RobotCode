@@ -37,12 +37,14 @@ public class IntakeSubsystem extends SubsystemBase {
         }
     }
 
+    //intake command methods
     public void lowerIntake() { intakeRotator.set(-.3); }
 
     public void raiseIntake() { intakeRotator.set(.3); }
 
     public void disableIntake() { intakeRotator.set(0); }
 
+    //stalls motor if the intake limit is met
     private void intakeProtection() {
         if (Math.abs(intakeMotor.getStatorCurrent()) > intakeCurrentLimit) {
             if (stalltimer.get() == 0) {
