@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DrivetrainSubsystem;
 
+//extends drivetrain for 90 degree rotation command
 public class ChangeQuickTurnCommand extends CommandBase {
     private final DrivetrainSubsystem drivetrainSubsystem;
     Joystick controller;
